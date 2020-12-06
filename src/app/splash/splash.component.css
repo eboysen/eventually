@@ -1,0 +1,44 @@
+
+#vibur{
+    font-family: Vibur;
+    font-size: 3vw;
+    margin-left: 5vw;
+}
+#circle{
+    width: 20vw;
+    height: 20vw;
+    -webkit-border-radius: 100%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
+#smallCircle{
+    width: 80%;
+    height: 3vw;
+    -webkit-border-radius: 100%;
+    -moz-border-radius:100%;
+    border-radius:100%;
+}
+.orange{
+    background: #DD7230;
+}
+.grey{
+    background: #BEBAC9;
+}
+.center{
+    position: relative;
+    margin-left:40vw;
+    padding-top: 20vh;
+    
+}
+.leftSmall{
+    padding-left:20%;
+    padding-top:43%;
+    padding-right:5%
+}
+.rightPad{
+    margin-left:15%;
+}
+.centerText{
+    margin-top: 23vh;
+    margin-left:45vw;
+}
