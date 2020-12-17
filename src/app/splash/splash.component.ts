@@ -7,6 +7,7 @@ import {
   animate,
   transition } from '@angular/animations';
 import { preserveWhitespacesDefault } from '@angular/compiler';
+import {SplashService} from '../splash.service';
 
 
 @Component({
@@ -33,7 +34,9 @@ export class SplashComponent implements OnInit {
   label = "Welcome";
   
 
-  constructor(private elementRef: ElementRef) { }
+  constructor(private elementRef: ElementRef,private splash:SplashService,) {
+    
+   }
 
   ngOnInit(): void {
     //initializes that desired background color for this page on startup
@@ -42,33 +45,35 @@ export class SplashComponent implements OnInit {
 
   LoginEnter(){
     this.isLogin = true;
-    this.label = "LogIn";
-    this.fireEvent();
+    this.label = "Log In";
+    this.splash.setStatus(this.isAbout||this.isLogin||this.isLogon);
+    
   }
   LoginExit(){
     this.isLogin = false;
     this.label = "Welcome";
-    this.fireEvent();
+    this.splash.setStatus(this.isAbout||this.isLogin||this.isLogon);
+    
   }
   LogOnEnter(){
     this.isLogon = true;
     this.label = "Log On";
-    this.fireEvent();
+    this.splash.setStatus(this.isAbout||this.isLogin||this.isLogon);
   }
   LogOnExit(){
     this.isLogon = false;
     this.label = "Welcome";
-    this.fireEvent();
+    this.splash.setStatus(this.isAbout||this.isLogin||this.isLogon);
   }
   AboutEnter(){
     this.isAbout = true;
     this.label = "About Us";
-    this.fireEvent();
+    this.splash.setStatus(this.isAbout||this.isLogin||this.isLogon);
   }
   AboutExit(){
     this.isAbout = false;
     this.label = "Welcome";
-    this.fireEvent();
+    this.splash.setStatus(this.isAbout||this.isLogin||this.isLogon);
   }
   @Output() 
   public childEvent= new EventEmitter();

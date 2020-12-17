@@ -1,6 +1,8 @@
 .size{
     position: relative;
     display: block;
-    width: 100vw;
-    height: 100vh;
+    width: 99.5vw;
+    height: 99.5vh;
+    margin-top:-1vh;
+    margin-left:-1vw;
 }
