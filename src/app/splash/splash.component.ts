@@ -57,7 +57,7 @@ export class SplashComponent implements OnInit {
   }
   LogOnEnter(){
     this.isLogon = true;
-    this.label = "Log On";
+    this.label = "Register";
     this.splash.setStatus(this.isAbout||this.isLogin||this.isLogon);
   }
   LogOnExit(){
