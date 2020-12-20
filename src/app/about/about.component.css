@@ -1,0 +1,19 @@
+#vibur{
+    font-family: Vibur;
+    font-size: 3vw;
+    margin-left: 5vw;
+}
+.center{
+    position: relative;
+    margin-left:40vw;
+    padding-top: 20vh;
+    
+}
+
+.centerPara{
+    position: relative;
+    margin-left:30vw;
+    margin-right:25vw;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    
+}

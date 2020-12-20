@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "eventually-2fbc0": {
+      "hosting": {
+        "eventually": [
+          "eventually-2fbc0"
+        ]
+      }
+    }
+  }
+}

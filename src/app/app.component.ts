@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef } from '@angular/core';
 import { 
   trigger,
   state,
@@ -6,6 +6,8 @@ import {
   animate,
   transition } from '@angular/animations';
 import { bindCallback } from 'rxjs';
+import { Reference } from '@angular/compiler/src/render3/r3_ast';
+import { SplashService } from './splash.service';
 
 @Component({
   selector: 'app-root',
@@ -21,12 +23,24 @@ import { bindCallback } from 'rxjs';
         backgroundColor: '#F8F6DD',
         color:"black",
       })),
-      transition('standard => orange', [animate('1.5s')]),
-      transition('orange => standard', [animate('1.5s')]),
+      transition('standard => orange', [animate('.5s')]),
+      transition('orange => standard', [animate('.5s')]),
     ]),
   ]
 })
 export class AppComponent {
   title = 'eventually';
-  status = false;
+  status:boolean=false;
+
+ 
+
+  constructor(private splash:SplashService){
+    splash.getStatus().subscribe(
+      x=>this.status =x,
+      err => console.log(err),
+      () => console.log('Complete')
+    )
+  }
+ 
 }
+
