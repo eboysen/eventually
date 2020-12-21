@@ -4,6 +4,8 @@ import * as firebaseui from 'firebaseui'
 import 'firebaseui/dist/firebaseui.css'
 import { AuthProvider } from 'ngx-auth-firebaseui';
 import { SplashService } from '../splash.service';
+import { Router } from '@angular/router';
+import { FirebaseDatabase } from 'angularfire2';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ import { SplashService } from '../splash.service';
 })
 export class LoginComponent implements OnInit {
   providers = AuthProvider;
-  constructor(private elementRef: ElementRef,private splash:SplashService,) { }
+  constructor(private elementRef: ElementRef,private splash:SplashService, private router:Router) { }
 
   ngOnInit(): void {
     this.splash.setStatus(true);
@@ -23,5 +25,9 @@ export class LoginComponent implements OnInit {
     console.log(thing.getIdToken());
     
   }
+  redirectToRegister(){
+    this.router.navigate(['/register'])
+  }
+
 
 }

@@ -10,7 +10,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { environment } from '../environments/environment';
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
-import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
 import { SplashService } from './splash.service';
 import { LoginService } from './login.service';
 import { LoginComponent } from './login/login.component';
@@ -18,6 +18,8 @@ import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { RegisterComponent } from './register/register.component'
+import { RegisterService } from './register.service';
+import { UserDashComponent } from './user-dash/user-dash.component';
 
 const routes: Routes = [
   { path: 'splash', component: SplashComponent},
@@ -33,6 +35,7 @@ const routes: Routes = [
     AboutComponent,
     LoginComponent,
     RegisterComponent,
+    UserDashComponent,
     
   ],
   imports: [
@@ -47,10 +50,13 @@ const routes: Routes = [
     MatPasswordStrengthModule,
     FlexLayoutModule,
     
+    
   ],
   providers: [
     SplashService,
     LoginService,
+    RegisterService,
+    AngularFireAuth,
   ],
   bootstrap: [AppComponent],
 

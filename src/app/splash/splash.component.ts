@@ -41,6 +41,7 @@ export class SplashComponent implements OnInit {
   ngOnInit(): void {
     //initializes that desired background color for this page on startup
     this.elementRef.nativeElement.ownerDocument.body.style.backgroundColor = "#F8F6DD";
+    this.splash.setStatus(false);
   }
 
   LoginEnter(){

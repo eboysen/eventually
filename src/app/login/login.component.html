@@ -1,5 +1,5 @@
 <body>
     <ngx-auth-firebaseui-login
-    [providers] =[providers.Google]  appearance = "standard" (onSuccess)=printUser($event)>
+    [providers] =[providers.Google]  appearance = "standard" (onSuccess)=printUser($event) (onCreateAccountRequested)=redirectToRegister()>
     </ngx-auth-firebaseui-login>
 </body>
