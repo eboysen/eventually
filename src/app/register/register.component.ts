@@ -28,7 +28,9 @@ export class RegisterComponent implements OnInit {
       projects:["Project1","Project2"]
     },
     {merge:true});
+    this.router.navigate(['/dashboard'])
   }
+
   
 
 }

@@ -6,6 +6,7 @@ import { AuthProvider } from 'ngx-auth-firebaseui';
 import { SplashService } from '../splash.service';
 import { Router } from '@angular/router';
 import { FirebaseDatabase } from 'angularfire2';
+import { AngularFirestore } from '@angular/fire/firestore';
 
 @Component({
   selector: 'app-login',
@@ -14,7 +15,7 @@ import { FirebaseDatabase } from 'angularfire2';
 })
 export class LoginComponent implements OnInit {
   providers = AuthProvider;
-  constructor(private elementRef: ElementRef,private splash:SplashService, private router:Router) { }
+  constructor(private elementRef: ElementRef,private splash:SplashService, private router:Router, private db:AngularFirestore) { }
 
   ngOnInit(): void {
     this.splash.setStatus(true);
@@ -27,6 +28,13 @@ export class LoginComponent implements OnInit {
   }
   redirectToRegister(){
     this.router.navigate(['/register'])
+  }
+  login(evnt:any){
+    this.db.collection('users').doc(evnt.uid).set({
+      projects:["Project1","Project2"]
+    },
+    {merge:true});
+    this.router.navigate(['/dashboard'])
   }
 
 

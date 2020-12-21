@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { SplashService } from '../splash.service';
 
 @Component({
   selector: 'app-user-dash',
@@ -7,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDashComponent implements OnInit {
 
-  constructor() { }
+  constructor(private splash:SplashService) { }
 
   ngOnInit(): void {
+    this.splash.setStatus(false);
   }
 
 }
