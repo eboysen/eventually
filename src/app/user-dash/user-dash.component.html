@@ -1,1 +1,14 @@
-<p>user-dash works!</p>
+<div class="quickInfo">
+    <app-header></app-header>
+    <h3>User: {{this.auth.displayName}}</h3>
+</div>
+<div class = projects>
+    <div *ngFor="let project of this.auth.projects" class = project (click)="onSelect(project.id)">
+        <h2>{{project.title}}</h2>
+        <p>{{project.description}}</p>
+        <p>{{project.id}}</p>
+    </div>
+</div>
+<div class = "addButton">
+    <button mat-fab color=primary size=20px><h1>+</h1></button>
+</div>

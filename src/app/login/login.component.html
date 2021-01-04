@@ -1,5 +1,8 @@
 <body>
+    <div class = log>
     <ngx-auth-firebaseui-login
-    [providers] =[providers.Google]  appearance = "standard" (onSuccess)=login($event) (onCreateAccountRequested)=redirectToRegister()>
+    [providers] =[]  appearance = "fill" (onSuccess)=login($event) (onCreateAccountRequested)=redirectToRegister()
+    titleText="Welcome back to Eventually!">
     </ngx-auth-firebaseui-login>
+    </div>
 </body>

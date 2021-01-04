@@ -1,0 +1,10 @@
+<mat-menu #menu="matMenu">
+    <button mat-menu-item (click)=logout()>Log Out</button>
+</mat-menu>
+<div class="menu">
+    <button [matMenuTriggerFor]="menu" mat-icon-button color=primary><mat-icon svgIcon='menu' aria-hidden="false"></mat-icon></button>
+</div>
+<div class = "title">
+    <h1>Eventually</h1>
+</div>
+

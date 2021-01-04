@@ -25,7 +25,7 @@ export class RegisterComponent implements OnInit {
 
   registration(event:any){
     this.db.collection('users').doc(event.uid).set({
-      projects:["Project1","Project2"]
+      projects:[]
     },
     {merge:true});
     this.router.navigate(['/dashboard'])

@@ -12,7 +12,6 @@ import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
 import { AngularFireAuth, AngularFireAuthModule } from '@angular/fire/auth';
 import { SplashService } from './splash.service';
-import { LoginService } from './login.service';
 import { LoginComponent } from './login/login.component';
 import { NgxAuthFirebaseUIModule } from 'ngx-auth-firebaseui';
 import { MatPasswordStrengthModule } from '@angular-material-extensions/password-strength';
@@ -20,6 +19,13 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { RegisterComponent } from './register/register.component'
 import { RegisterService } from './register.service';
 import { UserDashComponent } from './user-dash/user-dash.component';
+import { ProjectComponent } from './project/project.component';
+import { fromEventPattern } from 'rxjs';
+import { MatButtonModule } from '@angular/material/button';
+import { MatSliderModule } from '@angular/material/slider';
+import { MatMenu, MatMenuItem, MatMenuModule, MatMenuTrigger } from '@angular/material/menu';
+import { MatIcon, MatIconModule } from '@angular/material/icon';
+import { HeaderComponent } from './header/header.component';
 
 const routes: Routes = [
   { path: 'splash', component: SplashComponent},
@@ -28,6 +34,8 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent},
   { path: 'register', component: RegisterComponent},
   { path: 'dashboard', component: UserDashComponent},
+  { path: 'projects/:id', component:ProjectComponent},
+  { path: 'signout', component: SplashComponent},
 ]
 @NgModule({
   declarations: [
@@ -37,6 +45,8 @@ const routes: Routes = [
     LoginComponent,
     RegisterComponent,
     UserDashComponent,
+    ProjectComponent,
+    HeaderComponent,
     
   ],
   imports: [
@@ -50,12 +60,14 @@ const routes: Routes = [
     NgxAuthFirebaseUIModule.forRoot(environment.firebaseConfig),
     MatPasswordStrengthModule,
     FlexLayoutModule,
-    
+    MatButtonModule,
+    MatSliderModule,
+    MatMenuModule,
+    MatIconModule,
     
   ],
   providers: [
     SplashService,
-    LoginService,
     RegisterService,
     AngularFireAuth,
   ],

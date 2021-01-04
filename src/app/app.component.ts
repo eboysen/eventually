@@ -16,11 +16,11 @@ import { SplashService } from './splash.service';
   animations:[
     trigger('hoverButton',[
       state('orange',style({
-        backgroundColor: '#DD7230',
+        backgroundColor: '#809BCE',
         color: "white",
       })),
       state('standard',style({
-        backgroundColor: '#F8F6DD',
+        backgroundColor: '#e3e1ca',
         color:"black",
       })),
       transition('standard => orange', [animate('.5s')]),

@@ -1,0 +1,45 @@
+.quickInfo{
+    font-family:cursive;
+    display:block;
+    background-color: #003366;
+    color:white;
+    width: 100vw;
+    height: 20vh;
+    position: absolute;
+ 
+}
+.projects{
+    position:absolute;
+    margin-top:20vh;
+    
+}
+.project{
+    display:block;
+    background-color: #FFFFFF;
+    color:black;
+    width: 80vw;
+    height: 15vh;
+    position: relative;
+    margin-top: 5vh;
+    margin-left:10vw;
+    padding:10px;
+    -webkit-border-radius: 5%;
+    -moz-border-radius:5%;
+    border-radius:10px;
+    margin-bottom:5vh;
+}
+.addButton{
+    color:white;
+    position:fixed;
+    margin-top:87vh;
+    margin-left:80vw;
+    margin-right:50vw;
+    height: 20vh;
+    width:20vh;
+    text-align: center;
+}
+.topCenter{
+    margin-top:36%;
+    font-size: 6vh;
+    position:relative;
+}

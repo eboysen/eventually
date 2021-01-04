@@ -1,0 +1,18 @@
+.quickInfo{
+    display:block;
+    background-color: #003366;
+    color:white;
+    width: 100vw;
+    height: 20vh;
+    position: absolute;
+}
+.addButton{
+    color:white;
+    position:fixed;
+    margin-top:87vh;
+    margin-left:80vw;
+    margin-right:50vw;
+    height: 20vh;
+    width:20vh;
+    text-align: center;
+}
