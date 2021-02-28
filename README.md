@@ -1,3 +1,6 @@
+# IMPORTANT NOTE
+There is a known bug in this code which requires the app.component.html file to be rebuilt before the server will run correctly
+
 # Eventually
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 11.0.2.
